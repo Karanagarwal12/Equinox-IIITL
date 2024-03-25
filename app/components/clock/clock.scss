@@ -1,0 +1,13 @@
+#Clock{
+    position: relative;
+    color: #fff;
+    display: flex;
+    gap: 0.2em;
+    font-size: 1em;
+    .clockElem:nth-child(2n-1){
+        padding: 0 1vw;
+        background-color: #ffffff42;
+        border-radius: 0.5vw;
+        box-shadow: 0 0 1vw #ffffff61;
+    }
+}

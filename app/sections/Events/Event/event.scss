@@ -1,0 +1,90 @@
+.Event {
+  border: 1px solid #ffffff6f;
+  width: 400px;
+  height: 550px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0px 10px 5px #ffffff32;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.03) translateY(-10px);
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0px -40px 25px -20px #000000;
+  }
+  & > .coverPhoto {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  & > .details {
+    position: relative;
+    padding: 12px;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    & > .title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    & > #Clock {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      width: fit-content;
+      gap: 0.2em;
+      font-size: 1em;
+      .clockElem:nth-child(2n-1) {
+        padding: 0 10px;
+        border-radius: 5px;
+      }
+    }
+    & > .progressBar {
+      width: 376px;
+      height: 2px;
+      background-color: #ffffff53;
+      border-radius: 10px;
+      position: relative;
+      padding: 0 20px;
+      & > .progress {
+        width: 50%;
+        height: 100%;
+        background-color: #c9f9a5;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 10px 5px #51ff00;
+      }
+    }
+    & > .register {
+      background-color: red;
+      border-radius: 40px;
+      padding: 6px 20px;
+      &:hover {
+        background-color: rgb(255, 32, 32);
+      }
+    }
+    & > .overed {
+      width: 100%;
+      text-align: center;
+      border: 1px solid #afafaf;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+  }
+}

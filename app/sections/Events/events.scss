@@ -1,0 +1,19 @@
+#Events {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  padding: 2vw;
+  & > .eventState {
+    &>.title{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        line-height: 60px;
+    }
+    & > .events {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2vw;
+    }
+  }
+}

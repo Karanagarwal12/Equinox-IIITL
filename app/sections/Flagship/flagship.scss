@@ -1,0 +1,16 @@
+#Flagship{
+    .title{
+        font-size: 2vw;
+        padding: 1.5vw;
+        text-shadow: 0px 0px 0.5vw #ffffff;
+        font-weight: 600;
+    }
+    .flagEvents{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+        padding: 2vw 0;
+    }
+}
