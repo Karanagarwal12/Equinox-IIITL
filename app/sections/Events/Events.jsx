@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './events.scss';
-import Link from 'next/link'
 import Event from './Event/Event';
 import axios from 'axios';
 import { backendURL } from '@/values';
@@ -49,7 +48,7 @@ export default function Events() {
             <div className="ongoing eventState">
                 <h1 className="title">Ongoing Events</h1>
                 <div className="events">
-                    <Link href="https://forms.gle/MehtJCWYq3jCgakB8"><Event data={addEvent} key={-1} /></Link>
+                    <a href="https://forms.gle/MehtJCWYq3jCgakB8" target="_blank"><Event data={addEvent} key={-1} /></a>
                     {ongoing.length != 0 && ongoing.map((event, i) => (
                         <Event data={event} key={i} />
                     )) || <span className="emptyState">None</span>}
@@ -58,7 +57,7 @@ export default function Events() {
             <div className="upcoming eventState">
                 <h1 className="title">Upcoming Events</h1>
                 <div className="events">
-                    <Link href="https://forms.gle/MehtJCWYq3jCgakB8"><Event data={addEvent} key={-1} /></Link>
+                    <a href="https://forms.gle/MehtJCWYq3jCgakB8" target="_blank"><Event data={addEvent} key={-1} /></a>
                     {upcoming.length != 0 && upcoming.map((event, i) => (
                         <Event data={event} key={i} />
                     )) || <span className="emptyState">None</span>}
@@ -67,7 +66,7 @@ export default function Events() {
             <div className="overed eventState">
                 <h1 className="title">Overed Events</h1>
                 <div className="events">
-                    <Link href="https://forms.gle/MehtJCWYq3jCgakB8"><Event data={addEvent} key={-1} /></Link>
+                    <a href="https://forms.gle/MehtJCWYq3jCgakB8" target="_blank"><Event data={addEvent} key={-1} /></a>
                     {overed.length != 0 && overed.map((event, i) => (
                         <Event data={event} key={i} />
                     )) || <span className="emptyState">None</span>}
