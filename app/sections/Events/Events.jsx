@@ -45,27 +45,27 @@ export default function Events() {
                 <h1 className="title">Ongoing Events</h1>
                 <div className="events">
                     <a href="https://forms.gle/MehtJCWYq3jCgakB8" target="_blank"><Event data={{...addEvent,clickHandler:()=>{}}} key={-1} /></a>
-                    {ongoing.length != 0 && ongoing.map((event, i) => (
+                    {ongoing.map((event, i) => (
                         <Event data={event} key={i} />
-                    )) || <span className="emptyState">None</span>}
+                    ))}
                 </div>
             </div>
             <div className="upcoming eventState">
                 <h1 className="title">Upcoming Events</h1>
                 <div className="events">
                     <a href="https://forms.gle/MehtJCWYq3jCgakB8" target="_blank"><Event data={{...addEvent,clickHandler:()=>{}}} key={-1} /></a>
-                    {upcoming.length != 0 && upcoming.map((event, i) => (
+                    {upcoming.map((event, i) => (
                         <Event data={event} key={i} />
-                    )) || <span className="emptyState">None</span>}
+                    ))}
                 </div>
             </div>
             <div className="overed eventState">
                 <h1 className="title">Overed Events</h1>
                 <div className="events">
                     <a href="https://forms.gle/MehtJCWYq3jCgakB8" target="_blank"><Event data={{...addEvent,clickHandler:()=>{}}} key={-1} /></a>
-                    {overed.length != 0 && overed.map((event, i) => (
+                    {overed.map((event, i) => (
                         <Event data={event} key={i} />
-                    )) || <span className="emptyState">None</span>}
+                    ))}
                 </div>
             </div>
         </div>
