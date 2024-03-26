@@ -36,8 +36,9 @@
     height: 150px;
     & > .title {
       font-size: 22px;
+      line-height: 24px;
       font-weight: 600;
-      margin-bottom: 10px;
+      width: 50%;
     }
     & > #Clock {
       position: absolute;
