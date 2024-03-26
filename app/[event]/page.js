@@ -71,7 +71,7 @@ export default function Home({ params }) {
                 <div className='hero'>
                     <div className='l' >
                         <h1 className='title'>{event?.title}</h1>
-                        {event?.prizePool && <h3 className='prizePool'>Prize Pool : <span>{event?.prizePool}</span></h3>}
+                        {event?.prizePool && <h3 className='prizePool'>Prize Pool : <span>{event?.prizePool} Rs</span></h3>}
                         {event?.club && <h3 className='club'>By <span>{event?.club}</span></h3>}<br /><br />
                         <pre><p className='des'>{event?.description}</p></pre><br />
                         <span className='date'>Start &nbsp;:&nbsp; {new Date(event?.start).toLocaleString()}</span><br />
