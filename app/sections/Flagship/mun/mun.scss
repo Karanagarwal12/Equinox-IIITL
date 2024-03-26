@@ -9,6 +9,8 @@
     font-size: 2.5vw;
     gap: 5vw;
     overflow: hidden;
+    cursor: pointer;
+
     &::after{
         content: '';
         display: block;

@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import './event.scss';
 import Clock from '@/app/components/clock/Clock';
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 
 export default function Event({ data }) {
+    const router = useRouter();
     const [eventTime, setEventTime] = useState(null);
     let endTime = new Date(data?.end).getTime();
     let startTime = new Date(data?.start).getTime();
@@ -33,11 +34,11 @@ export default function Event({ data }) {
     }
 
     return (
-        <div className="Event" id={data?.title} onClick={data?.clickHandler}>
+        <div className="Event" id={data?.title} onClick={data?.clickHandler && data?.clickHandler || (() => router.push(`/${data?.title}`))} >
             <img src={data?.coverPhoto} alt="CoverPhoto" className="coverPhoto" />
             <div className="details">
                 <h1 className="title">{data?.title}</h1>
-                {eventTime === "overed" && <span className="overed">Event Overed</span>
+                {eventTime === "overed" && <span className="overed">Event Over</span>
                     || (eventTime === "upcoming" && (
                         <Clock data={{ date: new Date(data?.start) }} />
                     ) || (

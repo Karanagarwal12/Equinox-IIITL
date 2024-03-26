@@ -1,0 +1,98 @@
+#eventDetailsPage {
+  padding-bottom: 5vw;
+  .nav {
+    background-color: #ffffff41;
+  }
+  & > .hero {
+    display: flex;
+    padding: 2vw;
+    & > .l {
+      width: 65%;
+      padding-right: 8vw;
+      p,
+      span,
+      div {
+        width: 100%;
+        text-wrap: wrap;
+      }
+      & > .title {
+        font-size: 2.5vw;
+        font-weight: 600;
+        margin-bottom: 1vw;
+        line-height: 3.5vw;
+        &::first-letter {
+          color: #ff1f1f;
+          font-size: 3.5vw;
+        }
+      }
+      & > .prizePool {
+        margin: 1vw 0;
+        span {
+          color: cyan;
+        }
+      }
+      & > .files a {
+        border-radius: 6px;
+        border: 2px solid #ffffff67;
+        padding: 0 10px;
+        cursor: pointer;
+      }
+      & > .links {
+        margin-top: 1vw;
+        a {
+          border-radius: 2vw;
+          background: red;
+          border: 2px solid #ffffff67;
+          padding: 0.5vw 4vw;
+          cursor: pointer;
+        }
+      }
+    }
+    & > .r {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5vw;
+      font-size: 1.2vw;
+      #Clock{
+        margin: 0 auto;
+        .clockElem:nth-child(2n-1){
+            padding: 0.2vw 1.5vw;
+        }
+      }
+      .progressBar{
+        width: 100%;
+      }
+      img{
+        border-radius: 1vw;
+      }
+    }
+  }
+  & .progressBar {
+    width: 376px;
+    height: 2px;
+    background-color: #ffffff53;
+    border-radius: 10px;
+    position: relative;
+    padding: 0 20px;
+    & > .progress {
+      width: 50%;
+      height: 100%;
+      background-color: #c9f9a5;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 10px 5px #51ff00;
+    }
+  }
+  & .overed {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #afafaf;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}

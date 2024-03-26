@@ -1,9 +1,11 @@
 import './mun.scss';
 import Clock from '@/app/components/clock/Clock';
+import { useRouter } from 'next/navigation';
 
 export default function MUN() {
+    const router = useRouter();
     return (
-        <div id="MUN">
+        <div id="MUN" onClick={() => router.push(`/${encodeURI("Equinox World MUN")}`)}>
             <div className="l">
                 <video autoPlay loop muted>
                     <source src="munBg.mp4" type="video/mp4" />
