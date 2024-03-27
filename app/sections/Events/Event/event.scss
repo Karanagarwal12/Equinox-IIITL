@@ -1,8 +1,8 @@
 .Event {
   border: 1px solid #ffffff6f;
-  width: 400px;
-  height: 550px;
-  border-radius: 25px;
+  width: 20vw;
+  height: 30vw;
+  border-radius: 1.3vw;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0px 10px 5px #ffffff32;
@@ -14,53 +14,54 @@
   &::after {
     content: "";
     display: block;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    aspect-ratio: 0.99;
     position: absolute;
     top: 0;
     left: 0;
-    box-shadow: inset 0px -40px 25px -20px #000000;
+    box-shadow: inset 0px -2.5vw 1.5vw -1vw #000000;
   }
   & > .coverPhoto {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    aspect-ratio: 0.99;
     object-fit: cover;
   }
   & > .details {
     position: relative;
-    padding: 12px;
+    padding: 0.8vw;
     z-index: 9;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 150px;
+    height: 10vw;
+    font-size: 0.8vw;
     & > .title {
-      font-size: 22px;
-      line-height: 24px;
+      font-size: 1.2vw;
+      line-height: 1.3vw;
       font-weight: 600;
       width: 50%;
     }
     & > #Clock {
       position: absolute;
-      top: 15px;
-      right: 0;
+      top: 1vw;
+      right: 0.6vw;
       width: fit-content;
       gap: 0.2em;
       font-size: 1em;
       .clockElem:nth-child(2n-1) {
-        padding: 0 10px;
-        border-radius: 5px;
+        padding: 0 0.5em;
+        border-radius: 0.2em;
       }
     }
     & > .progressBar {
-      width: 376px;
+      width: 100%;
       height: 2px;
       background-color: #ffffff53;
       border-radius: 10px;
       position: relative;
-      padding: 0 20px;
+      padding: 0 1vw;
       & > .progress {
-        width: 50%;
+        width: 100%;
         height: 100%;
         background-color: #c9f9a5;
         border-radius: 10px;
@@ -73,19 +74,59 @@
     }
     & > .register {
       background-color: red;
-      border-radius: 40px;
-      padding: 6px 20px;
+      border-radius: 2vw;
+      padding: 0.4vw 1vw;
       &:hover {
-        background-color: rgb(255, 32, 32);
+        background-color: #ff3232;
       }
     }
     & > .overed {
       width: 100%;
       text-align: center;
       border: 1px solid #afafaf;
-      border-radius: 10px;
-      margin-bottom: 10px;
-      padding: 10px;
+      border-radius: 0.5vw;
+      padding: 0.5vw;
     }
   }
+  // @media (max-width: 1200px) {
+  //   height: 275px;
+  //   width: 200px;
+  //   border-radius: 15px;
+  //   &::after {
+  //     width: 200px;
+  //     height: 200px;
+  //     box-shadow: inset 0px -20px 15px -10px #000000;
+  //   }
+  //   & > .coverPhoto {
+  //     width: 200px;
+  //     height: 200px;
+  //   }
+  //   & > .details {
+  //     padding: 6px;
+  //     height: 75px;
+  //     & > .title {
+  //       font-size: 11px;
+  //       line-height: 12px;
+  //     }
+  //     & > #Clock {
+  //       top: 7px;
+  //       .clockElem:nth-child(2n-1) {
+  //         padding: 0 5px;
+  //         border-radius: 3px;
+  //       }
+  //     }
+  //     & > .progressBar {
+  //       width: 188px;
+  //       height: 1px;
+  //     }
+  //     & > .register {
+  //       padding: 3px 10px;
+  //     }
+  //     & > .overed {
+  //       border-radius: 10px;
+  //       margin-bottom: 10px;
+  //       padding: 10px;
+  //     }
+  //   }
+  // }
 }

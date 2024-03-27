@@ -4,10 +4,15 @@
     height: 40vw;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 7vw;
     font-size: 3vw;
     cursor: pointer;
+    @media (max-width: 1200px) {
+        height: 70vw;
+        font-size: 4.5vw;
+    }
 }
